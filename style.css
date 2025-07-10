@@ -1,0 +1,140 @@
+:root {
+  --bg-gradient: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  --card: rgba(255, 255, 255, 0.9);
+  --text: #222;
+  --btn: #3b82f6; /* vibrant blue */
+  --btn-hover: #2563eb;
+  --input-bg: #ffffff;
+}
+
+body.dark {
+  --bg-gradient: linear-gradient(135deg, #1e1e2f, #3a3a5d);
+  --card: rgba(44, 44, 62, 0.95);
+  --text: #f1f1f1;
+  --btn: #8ab4f8; /* lighter blue */
+  --btn-hover: #669df3;
+  --input-bg: #2c2c3e;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  min-height: 100vh;
+  transition: background 0.4s ease;
+}
+
+.container {
+  background: var(--card);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  transition: background 0.3s, color 0.3s;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#loginArea,
+#logoutArea {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#loginArea input {
+  padding: 10px;
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: var(--input-bg);
+  color: var(--text);
+  font-size: 15px;
+}
+
+label {
+  display: block;
+  margin: 12px 0 4px;
+  font-weight: 500;
+}
+
+input[type="time"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: var(--input-bg);
+  color: var(--text);
+  box-sizing: border-box;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 6px 0;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: var(--btn);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: var(--btn-hover);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+#modeButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: auto;
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  background-color: var(--btn);
+}
+
+#modeButton:hover {
+  background-color: var(--btn-hover);
+}
+
+.output {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+em {
+  opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+}

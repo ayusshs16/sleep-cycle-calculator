@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sleep Cycle Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>🛏️ Sleep Cycle Calculator 💤</h2>
+
+    <div id="loginArea">
+      <input type="text" id="username" placeholder="Enter username" />
+      <button onclick="login()">Login</button>
+    </div>
+
+    <div id="logoutArea" style="display:none;">
+      Logged in as <strong id="currentUser"></strong>
+      <button onclick="logout()">Logout</button>
+    </div>
+
+    <div class="mode-toggle">
+      <button id="modeButton">🌞 Light Mode</button>
+    </div>
+
+    <label for="time">Choose Time:</label>
+    <input type="time" id="time" required />
+
+    <div class="options">
+      <button onclick="calculateWakeTimes()">I'm going to sleep 🛌</button>
+      <button onclick="calculateBedTimes()">I want to wake up ⏰</button>
+    </div>
+
+    <div class="extra">
+      <button onclick="setCurrentTime()">Use current time 🕒</button>
+      <button onclick="clearResult()">Clear ❌</button>
+    </div>
+
+    <div class="output" id="result"></div>
+    <div class="output" id="history"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
